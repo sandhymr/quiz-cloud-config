@@ -10,9 +10,9 @@ eureka:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/quiz_app
-    username: root
-    password: Sandhya@123
+    url: ${MYSQL_URL:ABC}
+    username: ${MYSQL_USER:SAD}
+    password: ${MYSQL_PASSWORD:SAD}
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
