@@ -9,7 +9,7 @@ eureka:
 
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: ${MYSQL_DRIVER_CLASS_NAME:SAD}
     url: ${MYSQL_URL:ABC}
     username: ${MYSQL_USER:SAD}
     password: ${MYSQL_PASSWORD:SAD}
