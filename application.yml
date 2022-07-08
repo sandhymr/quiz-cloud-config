@@ -1,22 +1,33 @@
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    hostname: localhost
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    hostname: localhost
 
 spring:
   datasource:
-    driver-class-name: ${MYSQL_DRIVER_CLASS_NAME:SAD}
-    url: ${MYSQL_URL:ABC}
-    username: ${MYSQL_USER:SAD}
-    password: ${MYSQL_PASSWORD:SAD}
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/quiz_app
+    username: quiz
+    password: quizApp
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
+
+#spring:
+#  datasource:
+#    driver-class-name: ${MYSQL_DRIVER_CLASS_NAME:SAD}
+#    url: ${MYSQL_URL:ABC}
+#    username: ${MYSQL_USER:SAD}
+#    password: ${MYSQL_PASSWORD:SAD}
+#  jpa:
+#    hibernate.ddl-auto: update
+#    generate-ddl: true
+#    show-sql: true
 
 # spring:
 #   datasource:
